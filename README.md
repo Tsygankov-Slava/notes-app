@@ -76,7 +76,7 @@ Run app:
 $ go run cmd/main.go
 ```
 
-Open swagger documentation in browser: `http://localhost:8001/swagger/index.html`
+Open swagger documentation in browser: [`http://localhost:8001/swagger/index.html`](http://localhost:8001/swagger/index.html)
 
 [🔝Table of contents](#table-of-contents)
 
