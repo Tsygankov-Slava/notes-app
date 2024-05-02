@@ -13,18 +13,18 @@ This application implements REST API for working with notes.
 
 
 ## Technical requirements
-> #### Programming Language: `Go 1.22.2`
-> #### Database: `PostgreSQL`
-> #### Main libs:
->   - `github.com/swaggo/gin-swagger` - This library integrates Swagger with the Gin framework, which allows you to automatically generate API documentation based on annotations in the code.
->   - `github.com/dgrijalva/jwt-go` - This library provides tools for creating and validating JWTs.
->   - `github.com/gin-gonic/gin` - It is a web framework for the Go language that facilitates the creation of web applications. It provides many useful tools such as routing, request processing and more.
->   - `github.com/jmoiron/sqlx` - This is an extension of the standard database package in Go for working with SQL. It provides additional functions and a user-friendly interface for executing SQL queries and working with the resulting data.
->   - `github.com/lib/pq` - This library is the PostgreSQL driver for Go. It provides an interface for connecting to a PostgreSQL database and making queries to it.
->   - `github.com/spf13/viper"` - This is a library for working with configuration files in Go. It allows you to conveniently download and use configuration parameters from various sources, such as files, environment variables, command line flags, and others.
->   - `github.com/sirupsen/logrus` - This is a logger for Go that provides rich logging functionality such as various logging levels, log formatting and more.
->   - `crypto/sha1` - This package is included in the standard Go library and provides an implementation of the SHA-1 hashing algorithm.
->   - `net/http` - This package is included in the standard Go library and provides functionality for working with HTTP requests and HTTP servers.
+#### Programming Language: `Go 1.22.2`
+#### Database: `PostgreSQL`
+#### Main libs:
+  - `github.com/swaggo/gin-swagger` - This library integrates Swagger with the Gin framework, which allows you to automatically generate API documentation based on annotations in the code.
+  - `github.com/dgrijalva/jwt-go` - This library provides tools for creating and validating JWTs.
+  - `github.com/gin-gonic/gin` - It is a web framework for the Go language that facilitates the creation of web applications. It provides many useful tools such as routing, request processing and more.
+  - `github.com/jmoiron/sqlx` - This is an extension of the standard database package in Go for working with SQL. It provides additional functions and a user-friendly interface for executing SQL queries and working with the resulting data.
+  - `github.com/lib/pq` - This library is the PostgreSQL driver for Go. It provides an interface for connecting to a PostgreSQL database and making queries to it.
+  - `github.com/spf13/viper"` - This is a library for working with configuration files in Go. It allows you to conveniently download and use configuration parameters from various sources, such as files, environment variables, command line flags, and others.
+  - `github.com/sirupsen/logrus` - This is a logger for Go that provides rich logging functionality such as various logging levels, log formatting and more.
+  - `crypto/sha1` - This package is included in the standard Go library and provides an implementation of the SHA-1 hashing algorithm.
+  - `net/http` - This package is included in the standard Go library and provides functionality for working with HTTP requests and HTTP servers.
 
 
 ## Features
@@ -70,6 +70,14 @@ Setting up the swagger documentation:
 ```
 $ swag init -g cmd/main.go
 ```
+
+Run app:
+```
+$ go run cmd/main.go
+```
+
+Open swagger documentation in browser: `http://localhost:8001/swagger/index.html`
+
 [🔝Table of contents](#table-of-contents)
 
 
