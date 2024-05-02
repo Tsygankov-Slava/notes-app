@@ -12,6 +12,17 @@ import (
 	"os"
 )
 
+// @title Notes App API
+// @version 1.0
+// @description API Server for Notes Application
+
+// @host localhost:8001
+// @BasePath /
+
+// @securityDefinitions.apikey ApiKeyAuth
+// @in header
+// @name Authorization
+
 func main() {
 	logrus.SetFormatter(new(logrus.JSONFormatter)) // json format more convenient for log collection systems
 
