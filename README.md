@@ -5,15 +5,10 @@ This application implements REST API for working with notes.
 ## Table of contents
 - [Technical requirements](#technical-requirements)
 - [Features](#features)
-  - [User authorization](#user-authorization)
-  - [User registration](#user-registration)
-  - [Posting note](#posting-note)
-  - [Editing note](#editing-note)
-  - [Displaying a list of notes](#displaying-a-list-of-notes)
 - [Project architecture](#project-architecture)
   - [Project structure](#project-structure)
   - [Tables for links](#tables-for-links)
-- [Deployment from the Docker](#deployment-from-the-docker)
+- [Run and Testing my REST API](#run-and-testing-my-rest-api)
 - [License](#license)
 
 
@@ -61,9 +56,20 @@ This application implements REST API for working with notes.
 [🔝Table of contents](#table-of-contents)
 
 
-## Deployment from the Docker
-> TODO
+##  Run and Testing my REST API
+Setting up the database:
+```
+/* optional */
+$ docker pull postgres
 
+$ migrate -path ./schema -database 'postgres://postgres:root@localhost:5436/notes-db?sslmode=disable' up
+$ docker run --name=notes-db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=root -e POSTGRES_DB=notes-db -p 5436:5432 -d --rm postgres
+```
+
+Setting up the swagger documentation:
+```
+$ swag init -g cmd/main.go
+```
 [🔝Table of contents](#table-of-contents)
 
 
